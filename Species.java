@@ -12,13 +12,11 @@ public class Species {
     public int getSize() { return size; }
     public int getReproRate() { return reproRate; }
     public int getfood() {return food;}
-
-    public int totalReproRate() { return size * reproRate; }
     
     public int totalFoodRate() { return size * food;}
     
     public int getRateOfChange(int starveOrEaten) {
-        int rateOfChange = totalReproRate() - starveOrEaten;
+        int rateOfChange = size * reproRate - starveOrEaten;
         return rateOfChange;
     }
 
